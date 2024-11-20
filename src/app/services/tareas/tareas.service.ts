@@ -46,12 +46,13 @@ export class TareasService {
     responsableId?: number | null,
     estadoId?: number | null,
     proyectoId?: number | null,
-    fechaCierre?: string | null
+    fechaCierre?: string | null,
+    fechaRegistro?: string | null
   ): Observable<any> {
-    // Crea un objeto para almacenar los parámetros
+    // Creamos una variable para guardar los parametros no nulos
     let params: any = {};
 
-    // Agrega los parámetros solo si no son nulos
+    // Si los parametros no son nulos entonces los agrega sino no.
     if (priorityId !== null) {
       params.prioridadId = priorityId;
     }
@@ -66,6 +67,9 @@ export class TareasService {
     }
     if (fechaCierre !== null) {
       params.fechaCierre = fechaCierre;
+    }
+    if (fechaRegistro !== null) {
+      params.fechaRegistro = fechaRegistro;
     }
 
     // Realiza la solicitud GET con los parámetros

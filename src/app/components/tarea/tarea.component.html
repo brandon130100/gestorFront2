@@ -42,11 +42,21 @@
 <label for="selectedFechaCierre">Fecha de Cierre:</label>
 <input type="date" [(ngModel)]="selectedFechaCierre" id="selectedFechaCierre" />
 
+<!-- Select para elegir la fecha de cierre -->
+<label for="selectedFechaRegistro">Fecha de Registro:</label>
+<input
+  type="date"
+  [(ngModel)]="selectedFechaRegistro"
+  id="selectedFechaRegistro"
+/>
+
 <!-- Botón para filtrar -->
 <!-- <button (click)="filterTareasByPriority()">Filtrar por Prioridad</button> -->
 
 <!-- <button (click)="filterTareasByResponsable()">Filtrar por Responsable</button> -->
-<button (click)="onFiltrar()">Filtrar</button>
+
+<!--Boton para filtrar-->
+<button (click)="botonFiltrar()">Filtrar</button>
 
 <!--Boton para borrar filtros-->
 <button (click)="getAllTareas()">Borrar filtros</button>

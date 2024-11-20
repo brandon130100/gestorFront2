@@ -24,6 +24,7 @@ export class TareaComponent implements OnInit {
   selectedEstadoId: number | null = null;
   selectedProyectoId: number | null = null;
   selectedFechaCierre: string | null = null;
+  selectedFechaRegistro: string | null = null;
 
   constructor(
     public fb: FormBuilder,
@@ -227,7 +228,8 @@ export class TareaComponent implements OnInit {
         this.selectedResponsableId,
         this.selectedEstadoId,
         this.selectedProyectoId,
-        this.selectedFechaCierre
+        this.selectedFechaCierre,
+        this.selectedFechaRegistro
       )
       .subscribe(
         (tareas) => {
@@ -239,8 +241,8 @@ export class TareaComponent implements OnInit {
       );
   }
 
-  onFiltrar(): void {
-    this.obtenerTareas(); // Vuelve a obtener las tareas con los filtros aplicados
+  botonFiltrar(): void {
+    this.obtenerTareas();
   }
 
   borrarFiltros(): void {
